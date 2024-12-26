@@ -1,0 +1,56 @@
+{
+    "name": "Carlos Jiménez",
+    "profession": "FullStack Developer",
+    "username": "carlosjimz87",
+    "avatar": "avatar.jpeg",
+    "summary":[
+        "Automation Engineer and Software Developer since 2011, Android-focused since 2019.",
+        "Expertise on scalable and testable solutions.",
+        "Committed to quality and custom-made products.",
+        "Enjoys teamwork and mentoring."
+    ],
+    "email": "carlosjimz87@gmail.com",
+    "location": "Madrid, Spain",
+    "socials": [
+        "LinkedIn;https://www.linkedin.com/in/carlosjimz",
+        "Twitter;https://twitter.com/carlosjimz87",
+        "GitHub;https://github.com/carlosjimz87",
+        "Gitlab;https://gitlab.com/carlosjimz87"
+    ],
+    "stack": [
+        "Java","Kotlin","Android","Python","Django","FastAPI","SpringBoot","JavaScript","NodeJS","ReactJS","Linux","Docker","Swift","iOS"
+    ],
+    "skills": ["Mobile Development", "Leadership", "Backend Development", "Coaching & Research"],
+    "skills-descriptions": [
+        "Contributed to the creation and maintenance of 6 published apps in the Google Play Store and over 10 apps in alternative markets. Developed apps for various sectors, including Banking, Finance, Marketplaces, Cryptocurrencies, Multimedia, Streaming, Augmented Reality, Data Management, and Education. Working with several presentation patterns (MVVM, MVI, MVC, VIPER). Independently created CI/CD pipelines and automated test harnesses. Integrated third-party platforms such as Firebase, Sentry, Airship, OneSignal, and others. Extensive use of instrumented and unit tests with Mockito, Mockk, Espresso, Assertion, JUnit, among others. Experienced with tailored custom products from scratch and snapshot testing to ensure design compliance. Expertise in complex bug fixing, legacy code maintenance, and refactoring. Working with real-time data consumption, video streaming, file management, rooted device operations, encryption, multimodal biometrics, payments, authentication, Augmented Reality, Bluetooth, BLE, NFC, OCR.", 
+        "Drive and motivate teams in the use of continuous development and best practices to ensure the health and performance of the products. Resolving adverse situations within work teams in a friendly and efficient manner. Coaching and supervising junior developers to reach upper levels (pair programming and code reviews). Comprehensive adoption of client requirements, with thorough reporting of project results, including charts and statistics. Reorient implementations and designs toward more efficient and effective architectures.",
+         "Different websites for different clients as a Freelancer from concept design to deployment. Collaborated in the maintenance of large production environments using Django/Python-based systems. Created and support multiple REST APIs using FastAPI and Flask. Cloud computing with AWS and Azure. Collaborated in the development of an Intelligent Transport System.", 
+         "Taught Physics and Programming at two universities (Technological Institute of Havana and Carlos III University of Madrid). Analysed the performance of multimodal biometric authentication on cross-platform development frameworks (Flutter, PhoneGap, Xamarin, and ReactNative). Created multiple platforms and databases to manage user data for various biometric evaluations. Implemented various solutions for data analysis challenges (LLMs, Neural Networks, Sentiment Analysis, Linear Regression). Developed hacking tools for educational purposes, such as a GSM sniffer. Coded a voting system using blockchain for educational purpose."
+        ],
+    "work": [
+        "Vass;Android Developer;company1.png", 
+        "Fever;FullStack Developer;company2.png",
+        "OpenJaw;Software Engineer;company3.png"
+    ],
+    "work-descriptions": [
+        "[Santender;Oct 2024 - Present;Developing security libraries tailored for enterprise Android applications, focusing on context-aware authentication, data protection, and secure communication.];[Perfumerías Unidas;Aug 2024 - Sep 2024;Contributed to the creation of a hybrid Android app for the company’s sales product rebranding. Built key components, including the preferences database and settings view, using a mixed MVVM architecture with webviews and Jetpack Compose.];[Caixabank Payments & Consumer;May 2023 - Dec 2023;Developed the new version of the app, introducing a new methodology to support a young team in delivering an MVP within a tight deadline. Implemented key UI and functional features like card account sliders and PDF management. Utilized a VIPER architecture with interfaces and componentization for code reuse. Ensured quality through code reviews, pair programming, testing, and continuous QA feedback.];[Renta 4 Banco;Sep 2022 - Aug 2024;Maintained the app solo, adding features and fixing MVP bugs, while meeting complex visual and structural requirements with the client. Later led a team to scale the app, reducing failures by over 70%. Resolved real-time issues (web-sockets, multi-threading) and integrated tests, CI/CD pipelines, coroutines, reactive programming, and dependency injection. Key contributor to decision-making, code reviews, and Jetpack Compose migration.];[Telefónica Tech;Aug 2021 - Sep 2022;Upgraded and maintained three apps, adapting them to newer Android versions and migrating code from Java to Kotlin. Enhanced performance by 35% through bug fixes, compatibility migrations and module refactoring, using tech like broadcast receivers, IPC (MQTT), file management, multi-threading, databases, device commands, permissions, dependency injection, and video players.]",
+        "Jan 2021 - Jul 2021;Developing Android app features using Kotlin in a mixed MVVM-MVP architecture with Jetpack Compose, DI containers, and third-party libraries (Sentry, Firebase, Retrofit). Enhanced backend features with Python and Django, employing a custom DI environment and hexagonal architecture. Both sides included high-coverage testing and a CI/CD pipeline, alongside pair programming and code reviews.",
+        "Jun 2019 - Dec 2020;Developing and maintaining the company’s main product by fixing bugs and adding features in a fast-paced environment, using Java, J2EE, XSLT, JavaScript, SCSS, and Oracle DB. Also contributing to new versions with SpringBoot, ReactJS, Bootstrap, and MongoDB."
+    ],
+    "education": [
+        "MEng. in Electronics Systems and Apps;edu1.png;Carlos III University", 
+        "MEng. in Digital Systems;edu2.png;Technological Institute of Havana", 
+        "BEng. of Automation;edu2.png;Technological Institute of Havana"
+    ],
+    "education-descriptions": [
+        "Sep 2015 - Dec 2016; Studying postgraduate courses in Electronics, Photonics, Robotics, Biometrics, High Power Components, and Digital Applications, among other topics.;[Incomplete]", 
+        "Sep 2012 - Dec 2013; Studying postgraduate courses in SCADA, Advanced Programming, Microprocessors & System on Chips, FPGAs, MATLAB, and Control Systems Theory, among other topics.;[Incomplete]", 
+        "Sep 2006 - Jun 2011; Graduated as an Engineer in Automation, covering topics like Control Systems, Object-Oriented Programming, Microprocessors, Electronics, Digital Systems, and Robotics. Successfully presented and awarded final thesis: “Baggage Handling Systems in La Habana Airport.”;[Graduated with 8.4/10]"
+    ],
+    "other": [
+        "Former student of Deep Learning and Hyperledger Development.",
+        "Former university professor.",
+        "Enthusiastic algorithmic trader.",
+        "Amateur chess and football player."
+    ]
+}

@@ -1,0 +1,259 @@
+body {
+    font-family: "Krub", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #020d18;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#name {
+    height: 50%;
+    font-size: xx-large;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px black;
+}
+
+#profession {
+    height: 50%;
+    font-size: medium;
+    color: #ffe752;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+}
+
+.avatar-photo {
+    transition: all 0.4s ease-in-out;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    object-fit: cover;
+}
+
+.header-content {
+    background-image: url("images/header.jpg");
+    background-position: 50% 70%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.user-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.user-info a:hover {
+    color: #ffc107;
+}
+
+.sub-header-content {
+    margin-top: 20px;
+}
+
+.user-info p {
+    margin-bottom: 0;
+}
+
+.user-socials .bi:hover {
+    color: var(--bs-warning) !important;
+}
+
+.list-group-item {
+    background-color: tomato;
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.accordion-item {
+    border: none;
+    background-color: transparent;
+}
+
+.accordion-collapse {
+    border: none;
+}
+
+.accordion-body {
+    border: none;
+    background-color: transparent;
+}
+
+/* Remove the default accordion arrow */
+.accordion-button::after {
+    display: none;
+}
+
+/* Remove background and shadow */
+.accordion-button {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none; /* Removes focus outline */
+}
+
+/* Remove the light blue outline on click */
+.accordion-button:focus {
+    outline: none; /* Completely remove focus outline */
+    box-shadow: none; /* Removes focus shadow */
+}
+
+/* Optional: Adjust hover effect */
+.accordion-button:not(.collapsed) {
+    color: #000; /* Active color */
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+
+
+
+/* Initial styles */
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.shrunk-header {
+    height: 65px;
+}
+
+.shrunk-avatar {
+    width: 55px;
+    height:55px;
+    transform: translateX(100%);
+}
+
+/* Name and Profession transitions */
+#name, #profession {
+    transition: font-size 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Shrunk text with transition */
+.shrunk-text h1 {
+    font-size: 1.3rem;
+    transform: translateX(0);
+}
+
+.shrunk-text h2 {
+    font-size: 1.0rem;
+    transform: translateX(0);
+}
+
+/* Collage Button Floating on Right Side */
+.collage-button {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+/* Grid Layout for the Collage */
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 5px;
+}
+
+.collage-grid img {
+    width: 75px; /* Small thumbnails */
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-In/Out Effect */
+.collage-button.fade-out {
+    opacity: 0;
+}
+
+.collage-button.fade-in {
+    opacity: 1;
+}
+
+/* Ensure the collage button scrolls with the page */
+.collage-button.scrollable {
+    position: fixed;
+}
+
+.tech-badge {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-badge:hover {
+    background-color: #ffc107 !important; /* Bootstrap warning color */
+    color: #212529 !important; /* Bootstrap dark text color */
+}
+
+/* 1) The container that holds the fan of images */
+.fan-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem; 
+  }
+  
+  /* 2) The base style for each image in the fan */
+  .fan-container .fan-image {
+    width: 120px;
+    height: auto;       /* or set a fixed height/width if you prefer squares */
+    border-radius: 10px; 
+    box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
+    object-fit: cover;  /* ensure images fill the shape nicely */
+    transition: transform 0.3s ease;
+  }
+  
+  /* 3) Use nth-child to rotate each image a bit.
+     Adjust angles and translateX as you like. */
+  .fan-container .fan-image:nth-child(1) {
+    transform: rotate(-10deg) translateX(20px);
+  }
+  .fan-container .fan-image:nth-child(2) {
+    transform: rotate(0deg);
+  }
+  .fan-container .fan-image:nth-child(3) {
+    transform: rotate(10deg) translateX(-20px);
+  }
+  
+  /* If you have more images, keep going or adjust logic accordingly */
+  /* For a hover effect, you could do something like: */
+  .fan-container .fan-image:hover {
+    z-index: 999;   /* bring hovered image on top */
+    transform: scale(1.1);
+  }
+
+  .logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .card {
+    background-color: transparent;
+    padding: 40px !important; /* remove default padding */
+    border: none !important;   /* or border: 0 !important; */
+    box-shadow: none !important; /* if you want to remove the default card shadow too */
+  }

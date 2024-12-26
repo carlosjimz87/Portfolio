@@ -1,0 +1,61 @@
+[
+    {
+        "id": "p1",
+        "title": "Renta 4 App",
+        "description": "In the initial phase, I worked solo on maintaining the app, adding functionalities, and fixing bugs inherited from the MVP. I engaged in active interchange with the client to ensure high-detail and complex visual and structural requirements were met. In the second phase, while leading the Android team, we focused on robustly scaling the application, resolving complex real-time issues with websockets and concurrency, and reducing failures by incorporating tests in the pipeline alongside more reactive programming and dependency injection.",
+        "contribution": "I played a key role in making decisions, performing code reviews, and guiding the migration to Jetpack Compose. I also introduced CI/CD best practices and maintained a strong collaborative environment for the Android team.",
+        "impact": "Reduced app failures by about 68%, significantly improving user experience and stability. Delivered a cleaner, maintainable codebase through Compose migration while fostering collaboration within the team.",
+        "logo": "logo_p1.webp",
+        "images": [
+            { "src": "image1_p1.jpg" },
+            { "src": "image2_p1.jpg" },
+            { "src": "image3_p1.jpg" }
+        ],
+        "video": "video_p1.mp4",
+        "url": "https://play.google.com/store/apps/details?id=com.r4.renta4"
+    },
+    {
+        "id": "p2",
+        "title": "InOne App",
+        "description": "Collaborated on developing the new version of this app, introducing an agile methodology to support a young team in delivering an MVP under a tight deadline. Designed key UI and functional features, such as card account sliders and efficient PDF handling. Employed a VIPER architecture for clean code and componentization, meeting strict code-quality requirements.",
+        "contribution": "Ensured quality through code reviews, pair programming, and continuous QA feedback. Coordinated testing strategies to maintain high standards while iterating rapidly.",
+        "impact": "Delivered a robust MVP on schedule despite tight deadlines. Improved user experience via well-structured features and thorough testing, helping the team gain confidence in agile processes.",
+        "logo": "logo_p2.webp",
+        "images": [
+            { "src": "image1_p2.png" },
+            { "src": "image2_p2.png" },
+            { "src": "image3_p2.png" }
+        ],
+        "video": "video_p2.mp4",
+        "url": "https://play.google.com/store/apps/details?id=com.caixabankpc.nowpay"
+    },
+    {
+        "id": "p3",
+        "title": "OnTheSpot",
+        "description": "Upgraded and maintained three apps for Spotdyna (a distributed multimedia player) by adapting to new Android versions, migrating legacy code from Java to Kotlin, fixing bugs, adding features, refactoring large modules, and increasing app performance by 35%.",
+       "contribution": "Utilized broadcast receivers, IPC-MQTT communications, file management, multi-threading, databases, device commands, custom permissions, and dependency injection to ensure robust functionality. Integrated both native and VLC video players for varied media requirements.",
+       "impact": "Improved stability and performance across multiple devices, reducing maintenance overhead. The performance gain, achieved through refactoring and careful optimization, led to smoother user experiences and easier long-term maintenance.",
+       "logo": "logo_p3.webp",
+        "images": [
+            { "src": "image1_p3.jpg" },
+            { "src": "image2_p3.jpg" },
+            { "src": "image3_p3.jpg" }
+        ],
+        "url": "https://www.telefonicaempresas.es/grandes-empresas/blog/spotdyna-sistema-operativo-tiendas-conectadas/"
+    },
+    {
+        "id": "p4",
+        "title": "Fever App",
+        "description": "Developed Android features in Kotlin within a mixed MVVM-MVP architecture and Jetpack Compose, integrating DI containers (Dagger/Hilt) and third-party libraries such as Sentry, Firebase, and Retrofit. Also improved and created features in Python/Django with a custom DI environment and a hexagonal architecture for the backend.",
+        "contribution": "Implemented a high coverage test harness on both Android and backend sides, employing a CI/CD production pipeline. Practiced pair programming and provided code reviews to maintain code quality and consistency.",
+        "impact": "Streamlined the deployment process and significantly reduced production issues thanks to consistent testing and automated pipelines. Enhanced collaboration across front-end and back-end teams, delivering faster iterations and more reliable releases.",
+        "logo": "logo_p4.webp",
+        "images": [
+            { "src": "image1_p4.jpg" },
+            { "src": "image2_p4.jpg" },
+            { "src": "image3_p4.jpg" }
+        ],
+        "video": "video_p4",
+        "url": "https://play.google.com/store/apps/details?id=com.feverup.fever"
+    }
+]
