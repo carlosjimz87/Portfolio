@@ -22,8 +22,9 @@ body {
     }
 
     .header-content {
-        height: 150px; /* Reduce header height */
-        background-size: cover; /* Make background responsive */
+        background-color: #000; /* Fallback color */
+        background-image: url("images/header.jpg");
+        background-position: 50% 70%;
     }
 
     .accordion-button {
@@ -35,8 +36,8 @@ body {
     }
 
     .floating-portfolio-button {
-        bottom: 2rem;
-        right: 1rem;
+        right: 1.5rem; /* Consistent margin */
+        bottom: 1.5rem; /* Consistent margin */
         font-size: 0.9rem;
     }
 }
@@ -150,8 +151,6 @@ h3 {
     box-shadow: none;
     border: none;
 }
-
-
 
 
 /* Initial styles */
@@ -320,7 +319,7 @@ h3 {
 }
 
 /* Adjust for desktop and tablet sizes */
-@media (min-width: 768px) {
+@media (min-width: 1221px) {
     .floating-portfolio-button {
         bottom: auto; 
         top: 50%;
@@ -330,7 +329,7 @@ h3 {
 }
 
 /* Adjust for mobile sizes */
-@media (max-width: 767px) {
+@media (max-width: 1220px) {
     .floating-portfolio-button {
         top: auto;
         bottom: 1rem;
