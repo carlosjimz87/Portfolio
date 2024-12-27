@@ -1,0 +1,16 @@
+name: Test Secrets
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-secrets:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Secrets
+        run: |
+          echo "Testing secrets..."
+          echo "FTP_HOST: ${{ secrets.FTP_HOST }}-test"
+          echo "FTP_USERNAME: ${{ secrets.FTP_USERNAME }}-test"
+          echo "FTP_PORT: ${{ secrets.FTP_PORT }}-test"
