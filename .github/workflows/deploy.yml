@@ -22,6 +22,6 @@ jobs:
           username: ${{ secrets.FTP_USERNAME || 'test-user' }}
           password: ${{ secrets.FTP_PASSWORD || 'test-password' }}
           port: ${{ secrets.FTP_PORT || '21' }}
-          local-dir: "./www/"
+          local-dir: ${{ secrets.WEB_DIR || './www' }}
           state-name: ".ftp-deploy-sync-state.json"  # Tracks changes
           dangerous-clean-slate: false  # Prevents deleting existing files unless tracked
