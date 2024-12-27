@@ -35,9 +35,7 @@ body {
     }
 
     .floating-portfolio-button {
-        width: 80px; /* Smaller button size */
-        height: 80px;
-        bottom: 1rem; /* Stay at bottom-right */
+        bottom: 2rem;
         right: 1rem;
         font-size: 0.9rem;
     }
@@ -325,8 +323,9 @@ h3 {
 @media (min-width: 768px) {
     .floating-portfolio-button {
         bottom: auto; 
-        top: 70%;
-        transform: translateY(-70%);
+        top: 50%;
+        right: 10rem;
+        transform: translateY(-50%);
     }
 }
 
@@ -335,7 +334,8 @@ h3 {
     .floating-portfolio-button {
         top: auto;
         bottom: 1rem;
-        right: 1rem;
+        right: auto;
+        left: 50%;
         transform: translateX(-50%); 
     }
 }
