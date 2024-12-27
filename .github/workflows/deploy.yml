@@ -14,14 +14,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Step 2: Upload files to FTP
+      # Step 3: Upload files to FTP
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST || 'ftp.example.com' }}
-          username: ${{ secrets.FTP_USERNAME || 'test-user' }}
-          password: ${{ secrets.FTP_PASSWORD || 'test-password' }}
-          port: ${{ secrets.FTP_PORT || '21' }}
-          local-dir: ${{ secrets.WEB_DIR || './www' }}
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          local-dir: ${{ secrets.WEB_DIR }}
           state-name: ".ftp-deploy-sync-state.json"  # Tracks changes
           dangerous-clean-slate: false  # Prevents deleting existing files unless tracked
