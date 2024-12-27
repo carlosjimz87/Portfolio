@@ -3,6 +3,44 @@ body {
     font-weight: 400;
     font-style: normal;
     background-color: #020d18;
+    min-width: 480px;
+}
+
+/* Mobile Styles (max-width: 767px) */
+@media (max-width: 767px) {
+    #name {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    #profession {
+        font-size: 1rem; /* Adjust profession text */
+    }
+
+    .avatar-photo {
+        width: 100px; /* Smaller avatar size */
+        height: 100px;
+    }
+
+    .header-content {
+        height: 150px; /* Reduce header height */
+        background-size: cover; /* Make background responsive */
+    }
+
+    .accordion-button {
+        font-size: 0.9rem; /* Adjust button font size */
+    }
+
+    .tech-badge {
+        font-size: 0.8rem; /* Smaller badge size */
+    }
+
+    .floating-portfolio-button {
+        width: 80px; /* Smaller button size */
+        height: 80px;
+        bottom: 1rem; /* Stay at bottom-right */
+        right: 1rem;
+        font-size: 0.9rem;
+    }
 }
 
 h1,
