@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     // 5) Populate name and profession
     setElementText('name', userData.name);
     setElementText('profession', userData.profession);
-    createFooterSection('footer', userData.username);
+    createFooterSection('footer', userData.name);
 
   } catch (error) {
     console.error("Error loading projects or data:", error);

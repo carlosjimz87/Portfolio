@@ -414,7 +414,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         populateWorkHistoryAccordion('work', data.work, data['work-descriptions']);
         populateEducationAccordion('education', data.education, data['education-descriptions']);
         populateList('others-text', data.other);
-        createFooterSection('footer', data.username);
+        createFooterSection('footer', data.name);
 
 
     } catch (error) {

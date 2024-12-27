@@ -82,25 +82,27 @@ export function createProjectCard(project) {
     return col;
   }
 
-
-export function createFooterSection(id, text) {
+export function createFooterSection(id, username) {
   const footerSection = document.getElementById(id);
   if (!footerSection) {
     console.error('No #footer element found in the DOM.');
     return;
   }
 
-   const footerDiv = document.createElement('div');
-    footerDiv.className = "col-12 d-flex justify-content-center align-items-center text-light m-4";
+  const footerDiv = document.createElement('div');
+  footerDiv.className = "col-12 d-flex justify-content-center align-items-center text-light m-4";
 
-    // 4) Set the inner HTML, using data.by for the username
-    footerDiv.innerHTML = `
-      <p class="mb-0 me-2 fs-8">
-        Developed by <strong class="text-warning">@${text}</strong>
-      </p>
-      <img src="images/favicon.ico" alt="carlosjimz87" style="height: 2em;" class="footer-icon">
-    `;
+  // Get the current year dynamically
+  const currentYear = new Date().getFullYear();
 
-    // 5) Append the footer div to the footer section
-    footerSection.appendChild(footerDiv);
+  // Set the inner HTML with the dynamically calculated year and user-provided username
+  footerDiv.innerHTML = `
+    <p class="mb-0 me-2 fs-8">
+      © ${currentYear} Developed by <strong class="text-warning">${username}</strong>. All Rights Reserved.
+    </p>
+    <img src="images/favicon.ico" alt="${username}" style="height: 2em;" class="footer-icon">
+  `;
+
+  // Append the footer div to the footer section
+  footerSection.appendChild(footerDiv);
 }
