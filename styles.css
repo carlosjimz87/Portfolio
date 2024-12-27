@@ -207,6 +207,15 @@ h3 {
     color: #212529 !important; /* Bootstrap dark text color */
 }
 
+.toggle-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) .toggle-icon {
+    transform: rotate(90deg); /* Rotates arrow to point down when expanded */
+}
+
 /* 1) The container that holds the fan of images */
 .fan-container {
     display: flex;

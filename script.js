@@ -66,9 +66,14 @@ document.addEventListener("DOMContentLoaded", async function() {
                     const skillTitle = document.createElement('h4');
                     skillTitle.textContent = skill;
         
-                    // Append icon and skillTitle to the button
+                    // Create the toggle arrow using Bootstrap Icons
+                    const toggleArrow = document.createElement('i');
+                    toggleArrow.className = 'bi bi-chevron-right ms-auto toggle-icon'; // Arrow styling
+        
+                    // Append icon, skillTitle, and toggleArrow to the button
                     button.appendChild(icon);
                     button.appendChild(skillTitle);
+                    button.appendChild(toggleArrow);
                     accordionHeader.appendChild(button);
         
                     // Create accordion collapse container
@@ -104,6 +109,20 @@ document.addEventListener("DOMContentLoaded", async function() {
         
                     // Append the accordion item to the accordion container
                     accordionContainer.appendChild(accordionItem);
+                });
+        
+                // Add event listener to toggle the arrow direction
+                accordionContainer.querySelectorAll('.accordion-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const arrow = button.querySelector('.toggle-icon');
+                        if (button.classList.contains('collapsed')) {
+                            arrow.classList.remove('bi-chevron-down');
+                            arrow.classList.add('bi-chevron-right');
+                        } else {
+                            arrow.classList.remove('bi-chevron-right');
+                            arrow.classList.add('bi-chevron-down');
+                        }
+                    });
                 });
             }
         };
@@ -168,21 +187,21 @@ document.addEventListener("DOMContentLoaded", async function() {
                     button.setAttribute('aria-expanded', 'false');
                     button.setAttribute('aria-controls', `collapseWork${index}`);
         
-                    // Add icon, role, and company logo to the button
-                    const icon = document.createElement('i');
-                    icon.className = 'bi bi-caret-right-fill me-3';  // Arrow icon
+                    // Add toggle arrow, role, and company logo to the button
+                    const toggleArrow = document.createElement('i');
+                    toggleArrow.className = 'bi bi-chevron-right ms-auto toggle-icon'; // Default arrow pointing right
                     const roleTitle = document.createElement('h4');
                     roleTitle.textContent = `${role} at `;
                     const companyLogo = document.createElement('img');
-                    companyLogo.src = images_url+logo;
+                    companyLogo.src = images_url + logo;
                     companyLogo.alt = company;
                     companyLogo.style.height = '2em';
                     companyLogo.className = 'footer-icon ms-3';
         
-                    // Append icon, roleTitle, and companyLogo to the button
-                    button.appendChild(icon);
+                    // Append toggleArrow, roleTitle, and companyLogo to the button
                     button.appendChild(roleTitle);
                     button.appendChild(companyLogo);
+                    button.appendChild(toggleArrow);
                     accordionHeader.appendChild(button);
         
                     // Create accordion collapse container
@@ -251,6 +270,20 @@ document.addEventListener("DOMContentLoaded", async function() {
                     // Append the accordion item to the accordion container
                     accordionContainer.appendChild(accordionItem);
                 });
+        
+                // Add event listener to toggle the arrow direction
+                accordionContainer.querySelectorAll('.accordion-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const arrow = button.querySelector('.toggle-icon');
+                        if (button.classList.contains('collapsed')) {
+                            arrow.classList.remove('bi-chevron-down');
+                            arrow.classList.add('bi-chevron-right'); // Right arrow for collapsed
+                        } else {
+                            arrow.classList.remove('bi-chevron-right');
+                            arrow.classList.add('bi-chevron-down'); // Down arrow for expanded
+                        }
+                    });
+                });
             }
         };
 
@@ -281,21 +314,21 @@ document.addEventListener("DOMContentLoaded", async function() {
                     button.setAttribute('aria-expanded', 'false');
                     button.setAttribute('aria-controls', `collapseEducation${index}`);
         
-                    // Add icon, degree, and university logo to the button
-                    const icon = document.createElement('i');
-                    icon.className = 'bi bi-caret-right-fill me-3';  // Arrow icon
+                    // Add toggle arrow, degree, and university logo to the button
+                    const toggleArrow = document.createElement('i');
+                    toggleArrow.className = 'bi bi-chevron-right ms-auto toggle-icon'; // Default arrow pointing right
                     const degreeTitle = document.createElement('h4');
                     degreeTitle.textContent = `${degree} at `;
                     const universityLogo = document.createElement('img');
-                    universityLogo.src = images_url+logo;
+                    universityLogo.src = images_url + logo;
                     universityLogo.alt = university;
                     universityLogo.style.height = '2em';
                     universityLogo.className = 'footer-icon ms-3';
         
-                    // Append icon, degreeTitle, and universityLogo to the button
-                    button.appendChild(icon);
+                    // Append toggleArrow, degreeTitle, and universityLogo to the button
                     button.appendChild(degreeTitle);
                     button.appendChild(universityLogo);
+                    button.appendChild(toggleArrow);
                     accordionHeader.appendChild(button);
         
                     // Create accordion collapse container
@@ -334,6 +367,20 @@ document.addEventListener("DOMContentLoaded", async function() {
         
                     // Append the accordion item to the accordion container
                     accordionContainer.appendChild(accordionItem);
+                });
+        
+                // Add event listener to toggle the arrow direction
+                accordionContainer.querySelectorAll('.accordion-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const arrow = button.querySelector('.toggle-icon');
+                        if (button.classList.contains('collapsed')) {
+                            arrow.classList.remove('bi-chevron-down');
+                            arrow.classList.add('bi-chevron-right'); // Right arrow for collapsed
+                        } else {
+                            arrow.classList.remove('bi-chevron-right');
+                            arrow.classList.add('bi-chevron-down'); // Down arrow for expanded
+                        }
+                    });
                 });
             }
         };
