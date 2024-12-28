@@ -435,3 +435,51 @@ h4 {
 .floating-portfolio-button:hover {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
+
+/* Floating portfolio button styles for top left */
+.floating-portfolio-button-back {
+    position: fixed;
+    z-index: 1000;
+    width: auto;
+    top: 1rem; /* Positioned at the top */
+    left: 1rem; /* Positioned at the left */
+    text-align: center;
+    line-height: 1.2; /* Align text vertically */
+    font-size: 1.5rem !important;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjustments for large screens */
+@media (min-width: 1221px) {
+    .floating-portfolio-button-back {
+        top: auto; /* Fixed top left for large screens */
+        bottom: 70%; /* Positioned at the bottom */
+        left: 15rem;
+        transform: none; /* No additional transforms */
+    }
+}
+
+/* Adjustments for screens smaller than 1220px */
+@media (max-width: 1220px) {
+    .floating-portfolio-button-back {
+        top: auto;
+        bottom: 1rem; /* Move to the bottom for smaller screens */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%);
+    }
+}
+
+/* Adjustments for mobile screens */
+@media (max-width: 767px) {
+    .floating-portfolio-button-back {
+        font-size: 1rem !important;
+    }
+}
+
+/* Hover effect for button */
+.floating-portfolio-button-back:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
