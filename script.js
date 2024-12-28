@@ -195,7 +195,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                     const companyLogo = document.createElement('img');
                     companyLogo.src = images_url + logo;
                     companyLogo.alt = company;
-                    companyLogo.style.height = '2em';
                     companyLogo.className = 'footer-icon ms-3';
         
                     // Append toggleArrow, roleTitle, and companyLogo to the button
@@ -322,7 +321,6 @@ document.addEventListener("DOMContentLoaded", async function() {
                     const universityLogo = document.createElement('img');
                     universityLogo.src = images_url + logo;
                     universityLogo.alt = university;
-                    universityLogo.style.height = '2em';
                     universityLogo.className = 'footer-icon ms-3';
         
                     // Append toggleArrow, degreeTitle, and universityLogo to the button
