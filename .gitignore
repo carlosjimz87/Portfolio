@@ -6,3 +6,9 @@ coverage/
 *.log
 *.log.*
 local-secrets.env
+*.zip
+*.tgz
+*.tar.gz
+*.tar
+*.gz
+*.tar.xz
