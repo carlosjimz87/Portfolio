@@ -37,18 +37,14 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 ├── README.md           # Project documentation
 └── package.json        # Project dependencies and scripts
 
-
-## 🌐 Online Portfolio  
-Check out my live portfolio here:  
-🔗 [**carlosjimz.dev**](https://www.carlosjimz.dev/portfolio.html)
-
 ---
 
 ## 📧 Contact Me  
 Feel free to reach out anytime:
-
-- ✉️ **Email:** [contact@carlosjimz.dev](mailto:contact@carlosjimz.dev)
-- 🌍 **Website:** [https://www.carlosjimz.dev](https://www.carlosjimz.dev)
+- 🌍 [Website](https://www.carlosjimz.dev)
+- 🔗 [Portfolio](https://www.carlosjimz.dev/portfolio.html)
+- ✉️ [Email Me](mailto:contact@carlosjimz.dev)
+  
 ---
 
 ## 📜 License
@@ -59,6 +55,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## ⭐ Acknowledgments
 
-- Special thanks to [@halonsoluis](https://github.com/halonsoluis) for the inspiration.
+- Special thanks to [halonsoluis](https://github.com/halonsoluis) for the inspiration.
 
 ---
