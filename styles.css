@@ -436,50 +436,78 @@ h4 {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-/* Floating portfolio button styles for top left */
+/* === Floating Back button (base look) === */
 .floating-portfolio-button-back {
-    position: fixed;
-    z-index: 1000;
-    width: auto;
-    top: 1rem; /* Positioned at the top */
-    left: 1rem; /* Positioned at the left */
-    text-align: center;
-    line-height: 1.2; /* Align text vertically */
-    font-size: 1.5rem !important;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  z-index: 1100;                 /* above .fixed-header (1000) */
+  width: auto;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 1.5rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* smooth, snappy motion */
+  transition:
+    top 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+    bottom 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
-/* Adjustments for large screens */
-@media (min-width: 1221px) {
-    .floating-portfolio-button-back {
-        top: auto; /* Fixed top left for large screens */
-        bottom: 70%; /* Positioned at the bottom */
-        left: 15rem;
-        transform: none; /* No additional transforms */
-    }
-}
-
-/* Adjustments for screens smaller than 1220px */
-@media (max-width: 1220px) {
-    .floating-portfolio-button-back {
-        top: auto;
-        bottom: 1rem; /* Move to the bottom for smaller screens */
-        left: 50%; /* Center horizontally */
-        transform: translateX(-50%);
-    }
-}
-
-/* Adjustments for mobile screens */
-@media (max-width: 767px) {
-    .floating-portfolio-button-back {
-        font-size: 1rem !important;
-    }
-}
-
-/* Hover effect for button */
+/* Hover effect (kept subtle to avoid jitter with transitions) */
 .floating-portfolio-button-back:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.06);
+}
+
+/* === LARGE screens (≥1221px): keep your current spot by default ===
+   Default (scrolling up / no .stick-bottom):
+   - stays where you placed it originally: bottom: 70%; left: 15rem
+*/
+@media (min-width: 1221px) {
+  .floating-portfolio-button-back {
+    top: auto;
+    bottom: 65%;
+    left: 15rem;
+    transform: none;
+  }
+}
+
+/* === STRETCHED & SMALL screens (≤1220px): default at TOP-CENTER ===
+   Default (scrolling up / no .stick-bottom):
+   - top: 1rem; centered on X axis
+*/
+@media (max-width: 1220px) {
+  .floating-portfolio-button-back {
+    top: auto;
+    bottom: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile font size tweak (kept from your file) */
+@media (max-width: 767px) {
+  .floating-portfolio-button-back {
+    font-size: 1rem !important;
+  }
+}
+
+/* === SCROLLING DOWN state (all breakpoints) ===
+   When .stick-bottom is added by JS:
+   - Only change vertical anchor to bottom (keep horizontal position as defined above)
+*/
+.floating-portfolio-button-back.stick-bottom {
+  top: auto !important;
+  bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+}
+
+/* Optional: lift when footer is visible (JS adds .avoid-footer) */
+.floating-portfolio-button-back.stick-bottom.avoid-footer {
+  bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-portfolio-button-back { transition: none; }
 }

@@ -36,3 +36,41 @@ document.addEventListener("DOMContentLoaded", async function() {
     console.error("Error loading projects or data:", error);
   }
 });
+
+// === Floating Back button: keep X, only change Y on scroll ===
+const backBtn = document.querySelector('.floating-portfolio-button-back');
+
+if (backBtn) {
+  let lastY = window.scrollY;
+  const threshold = 8; // avoid jitter on tiny scrolls
+
+  const onScroll = () => {
+    const y = window.scrollY;
+
+    // scrolling down -> dock to bottom; scrolling up -> restore original
+    if (y - lastY > threshold) {
+      backBtn.classList.add('stick-bottom');
+    } else if (lastY - y > threshold) {
+      backBtn.classList.remove('stick-bottom');
+    }
+
+    lastY = y;
+  };
+
+  // Lift when footer shows (prevents overlap)
+  const footer = document.getElementById('footer');
+  if ('IntersectionObserver' in window && footer) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          backBtn.classList.add('avoid-footer');
+        } else {
+          backBtn.classList.remove('avoid-footer');
+        }
+      });
+    });
+    io.observe(footer);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
