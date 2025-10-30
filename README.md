@@ -1,17 +1,17 @@
-# **🌟 My Portfolio**
+# 🌟 My Portfolio
 
 Welcome to my personal portfolio! This project showcases my skills, experience, and the projects I have worked on. Built with cutting-edge technologies, it represents my journey as a developer and serves as a gateway for potential collaborators and employers.
 
 ---
 
-## **🚀 Features**
+## 🚀 Features
 
 - **Dynamic and Responsive Design**: Optimized for all devices, from desktops to smartphones.
 - **Showcase of Projects**: Explore my past work with detailed descriptions and live demos.
 
 ---
 
-## **🛠️ Technologies Used**
+## 🛠️ Technologies Used
 
 - **Frontend**:
   - HTML5, CSS3, JavaScript (ES6+)
@@ -23,7 +23,7 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 
 ---
 
-## **📂 Project Structure**
+## 📂 Project Structure
 
 ```plaintext
 .
@@ -38,28 +38,27 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 └── package.json        # Project dependencies and scripts
 
 
-## **🌐 Live Demo**
-
-Check out the live version here: [**Visit My Portfolio**](https://your-portfolio-link.com)
-
----
-
-## **📧 Contact**
-
-Feel free to reach out to me:
-
-- **Email**: [your.email@example.com](mailto:cantact@carlosjim.dev)
+## 🌐 Online Portfolio  
+Check out my live portfolio here:  
+🔗 [**carlosjimz.dev**](https://www.carlosjimz.dev/portfolio.html)
 
 ---
 
-## **📜 License**
+## 📧 Contact Me  
+Feel free to reach out anytime:
+
+- ✉️ **Email:** [contact@carlosjimz.dev](mailto:contact@carlosjimz.dev)
+- 🌍 **Website:** [https://www.carlosjimz.dev](https://www.carlosjimz.dev)
+---
+
+## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## **⭐ Acknowledgments**
+## ⭐ Acknowledgments
 
-- Special thanks to @halonsoluis for the inspiration.
+- Special thanks to [@halonsoluis](https://github.com/halonsoluis) for the inspiration.
 
 ---
