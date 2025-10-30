@@ -36,6 +36,7 @@ Welcome to my personal portfolio! This project showcases my skills, experience, 
 ├── .github/            # GitHub workflows for CI/CD
 ├── README.md           # Project documentation
 └── package.json        # Project dependencies and scripts
+```
 
 ---
 
