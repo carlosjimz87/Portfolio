@@ -1,61 +1,105 @@
 [
-    {
-        "id": "p1",
-        "title": "Renta 4 App",
-        "description": "The main app of Renta 4 Bank, an investment bank specializing in capital markets and portfolio management. The app offers real-time quotes, financial news, and investment tools for managing funds, bonds, and market assets.",
-        "contribution": "Collaborated with the dev team to deliver an MVP under a tight schedule. In the next phase, led the app’s evolution by implementing new features, enhancing the real-time data module, and reducing failures. In the final stage, oversaw the product delivery to the client, integrated a new team, and contributed to the Jetpack Compose migration.",
-        "impact": "Achieved a 68% reduction in app failures, significantly enhancing user experience and overall stability. Resolved critical issues with real-time quotes, ensuring accurate and reliable data for users.",
-        "logo": "logo_p1.webp",
-        "images": [
-            { "src": "image1_p1.jpg" },
-            { "src": "image2_p1.jpg" },
-            { "src": "image3_p1.jpg" }
-        ],
-        "video": "video_p1.mp4",
-        "url": "https://play.google.com/store/apps/details?id=com.r4.renta4"
-    },
-    {
-        "id": "p2",
-        "title": "InOne App",
-        "description": "A redesigned Caixabank Payments & Consumer app leveraging the company’s UI components library. This app allow users to manage accounts, cards, and transactions while providing seamless access to financial services. The redesign focused on enhancing usability and aligning with modern design standards..",
-        "contribution": "Collaborated on developing the new version of the app, mentoring a young team to adopt agile practices and deliver an MVP under a tight deadline. Refactored UI components like card sliders and implemented features such as a PDF reader and editor. Employed VIPER architecture to ensure clean, modular code and adhered to strict code-quality standards through code reviews, pair programming, and continuous QA testing.",
-        "impact": "Enhanced user experience with well-structured features and thorough testing. Successfully met client expectations by delivering the product redesign on time.",
-        "logo": "logo_p2.webp",
-        "images": [
-            { "src": "image1_p2.png" },
-            { "src": "image2_p2.png" },
-            { "src": "image3_p2.png" }
-        ],
-        "video": "video_p2.mp4",
-        "url": "https://play.google.com/store/apps/details?id=com.caixabankpc.nowpay"
-    },
-    {
-        "id": "p3",
-        "title": "OnTheSpot",
-        "description": "A dynamic multimedia and marketing platform within the Telefónica IoT ecosystem, serving nearly 50,000 customers across Spain. The app manages and controls multimedia content in real-time, supporting digital signage, interactive kiosks, and various IoT devices with robust tools for dynamic content delivery.",
-       "contribution": "Adapted the app for new Android versions, migrated legacy code from Java to Kotlin, and refactored large modules to improve maintainability. Leveraged technologies like broadcast receivers, IPC-MQTT, multi-threading, and dependency injection to ensure robust functionality. Integrated native and VLC video players to support varied media needs and enhanced real-time multimedia management.",
-       "impact": "Improved stability and performance by 35% across multiple devices, ensuring compatibility with new Android versions and recently acquired hardware. Refactoring and careful optimization reduced maintenance overhead, leading to smoother user experiences and easier long-term support.",
-       "logo": "logo_p3.webp",
-        "images": [
-            { "src": "image1_p3.jpg" },
-            { "src": "image2_p3.jpg" },
-            { "src": "image3_p3.jpg" }
-        ],
-        "url": "https://www.telefonicaempresas.es/grandes-empresas/blog/spotdyna-sistema-operativo-tiendas-conectadas/"
-    },
-    {
-        "id": "p4",
-        "title": "Fever App",
-        "description": "An award-winning European app designed as a live entertainment platform, offering interactive experiences to engage users in real-time events. It leverages a robust Android implementation to deliver seamless live entertainment with real-time updates and rich media content.",
-        "contribution": "Created new Android features in Kotlin using a hybrid MVVM-MVP architecture and Jetpack Compose in a fast-paced production environment. Contributed to building a high-coverage test harness and integrating it into the CI/CD pipeline. Maintained code quality through pair programming and thorough code reviews. In a full-stack capacity, facilitated collaboration between front-end and back-end teams to streamline development.",
-        "impact": "Streamlined the deployment process and significantly reduced production issues through consistent testing and automated pipelines. Reduced inconsistencies in coupon purchases, improving reliability and user satisfaction.",
-        "logo": "logo_p4.webp",
-        "images": [
-            { "src": "image1_p4.jpg" },
-            { "src": "image2_p4.jpg" },
-            { "src": "image3_p4.jpg" }
-        ],
-        "video": "video_p4",
-        "url": "https://play.google.com/store/apps/details?id=com.feverup.fever"
-    }
+  {
+    "id": "p1",
+    "title": "Santander Security Library",
+    "description": "Redesign and modernization of the Santander Security Context Manager (SCM) library, a core security component integrated into Santander’s mobile applications. Built with modern Kotlin, Retrofit, Koin and Coroutines versions, it provides a robust and thread-safe foundation for secure operations across Santander’s mobile ecosystem.",
+    "contribution": "Led the Android development of the SCM library through a complete architectural redesign and refactor. The library manages secure authentication workflows, credential orchestration, cryptographic verification, and token injection for HTTP and UDP request signatures. Implemented full thread safety, adaptive refresh handling for idle and Doze modes, and a restructured testing framework that evolved from a mock-heavy setup to a real-component-based strategy—enhancing reliability, stability, and long-term scalability.",
+    "impact": "Collaborated closely with the iOS lead to unify and synchronize the development of both platform libraries, achieving major gains in maintainability, delivery efficiency, and cross-platform consistency. The modernized SCM library is now deployed in Santander Brazil’s production app, serving over 20 million active users and more than 300,000 daily active sessions, significantly improving authentication reliability and system uptime across critical user operations.",
+    "logo": "logo_p1.webp",
+    "images": [
+      {
+        "src": "image1_p1.jpg"
+      },
+      {
+        "src": "image2_p1.jpg"
+      },
+      {
+        "src": "image3_p1.jpg"
+      }
+    ],
+    "url": "https://play.google.com/store/apps/details?id=com.santander.app"
+  },
+  {
+    "id": "p2",
+    "title": "Renta 4 Banco",
+    "description": "The official mobile application for Renta 4 Banco, a leading investment bank specializing in capital markets and portfolio management. The app provides real-time quotes, financial insights, and trading tools for managing portfolios, funds, and assets, with a strong focus on performance, reliability, and user experience.",
+    "contribution": "Collaborated with a cross-functional team to deliver the MVP under a tight schedule and later led the app’s evolution into production. Implemented new features, optimized real-time market data flows, and overhauled error-handling logic to enhance stability. Contributed to the Jetpack Compose migration to improve UI responsiveness and maintainability.",
+    "impact": "Achieved a 68% reduction app crashes, improving overall stability and user satisfaction. Reduced data latency in live quote updates by over 40%, enabling faster and more accurate portfolio tracking. The app serves Renta 4 Banco’s client base of approximately 100,000 investors (as of 2022), reinforcing the bank’s position in the digital investment market.",
+    "logo": "logo_p2.webp",
+    "images": [
+      {
+        "src": "image1_p2.jpg"
+      },
+      {
+        "src": "image2_p2.jpg"
+      },
+      {
+        "src": "image3_p2.jpg"
+      }
+    ],
+    "video": "video_p2.mp4",
+    "url": "https://play.google.com/store/apps/details?id=com.r4.renta4"
+  },
+  {
+    "id": "p3",
+    "title": "InOne App",
+    "description": "A redesigned version of the CaixaBank Payments & Consumer app, leveraging the company’s UI components library to modernize the interface and enhance usability. The app enables users to manage accounts, cards, and transactions, while providing seamless access to integrated financial services.",
+    "contribution": "Contributed to the development of the new app version by mentoring a junior team and promoting agile and clean-code practices. Refactored major UI components such as card sliders and implemented new features, including a custom PDF reader and editor. Adopted VIPER architecture to enforce modularity and maintainability, supported by rigorous QA testing, pair programming, and peer code reviews.",
+    "impact": "Delivered the redesigned app on schedule, fully aligned with CaixaBank’s design and usability standards. Improved modularity, reduced UI-related bugs, and enabled faster iteration cycles, leading to smoother user experiences and improved maintainability for future updates.",
+    "logo": "logo_p3.webp",
+    "images": [
+      {
+        "src": "image1_p3.png"
+      },
+      {
+        "src": "image2_p3.png"
+      },
+      {
+        "src": "image3_p3.png"
+      }
+    ],
+    "video": "video_p3.mp4",
+    "url": "https://play.google.com/store/apps/details?id=com.caixabankpc.nowpay"
+  },
+  {
+    "id": "p4",
+    "title": "OnTheSpot",
+    "description": "A multimedia and marketing platform within Telefónica’s IoT division, serving over 50,000 clients across Spain. The system manages and controls real-time multimedia content for digital signage, interactive kiosks, and connected IoT devices across enterprise environments.",
+    "contribution": "Modernized the Android app to ensure compatibility with newer Android versions and recently deployed hardware. Migrated large codebases from Java to Kotlin and refactored key modules to enhance performance and maintainability. Integrated VLC and native video players for robust media playback and leveraged IPC, MQTT, and multithreading to ensure reliable real-time content delivery.",
+    "impact": "Improved app stability and performance by over 35% across multiple hardware configurations. The modernization reduced maintenance overhead and improved deployment agility, enabling Telefónica to scale its digital signage infrastructure efficiently across hundreds of client locations.",
+    "logo": "logo_p4.webp",
+    "images": [
+      {
+        "src": "image1_p4.jpg"
+      },
+      {
+        "src": "image2_p4.jpg"
+      },
+      {
+        "src": "image3_p4.jpg"
+      }
+    ],
+    "url": "https://www.telefonicaempresas.es/grandes-empresas/blog/spotdyna-sistema-operativo-tiendas-conectadas/"
+  },
+  {
+    "id": "p5",
+    "title": "Fever App",
+    "description": "An award-winning European platform for live entertainment, enabling users to discover and participate in real-time events and immersive experiences. The Android app delivers media-rich content, real-time updates, and interactive features to millions of users worldwide.",
+    "contribution": "Developed new Android features using Kotlin, Jetpack Compose, and a hybrid MVVM–MVP architecture in a fast-paced production environment. Implemented automated testing integrated into the CI/CD pipeline to ensure consistent code quality. Collaborated with front-end and back-end teams to improve synchronization between client and API layers, reducing data inconsistencies and streamlining development.",
+    "impact": "Reduced production issues and deployment time through continuous integration and automated testing. Improved the reliability of ticket and coupon purchase flows, reducing related support requests by 30%. The app operates as part of a platform reaching over 300 million monthly users across 40+ countries, reinforcing Fever’s reputation for stability, scalability, and user trust in high-traffic entertainment markets.",
+    "logo": "logo_p5.webp",
+    "images": [
+      {
+        "src": "image1_p5.jpg"
+      },
+      {
+        "src": "image2_p5.jpg"
+      },
+      {
+        "src": "image3_p5.jpg"
+      }
+    ],
+    "video": "video_p5",
+    "url": "https://play.google.com/store/apps/details?id=com.feverup.fever"
+  }
 ]

@@ -70,7 +70,7 @@ export function createProjectCard(project) {
         <div class="mt-3">
           <row class="d-flex justify-content-center">
             <a href="${project.url}" target="_blank" class="badge bg-dark tech-badge text-decoration-none">
-              More Info
+              More +
             </a>
           </row>
         </div>
