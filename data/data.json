@@ -42,9 +42,9 @@
         "BEng. of Automation;edu2.png;Technological Institute of Havana"
     ],
     "education-descriptions": [
-        "Sep 2015 - Dec 2016; Studying postgraduate courses in Electronics, Photonics, Robotics, Biometrics, High Power Components, and Digital Applications, among other topics.;[Incomplete]", 
-        "Sep 2012 - Dec 2013; Studying postgraduate courses in SCADA, Advanced Programming, Microprocessors & System on Chips, FPGAs, MATLAB, and Control Systems Theory, among other topics.;[Incomplete]", 
-        "Sep 2006 - Jun 2011; Graduated as an Engineer in Automation, covering topics like Control Systems, Object-Oriented Programming, Microprocessors, Electronics, Digital Systems, and Robotics. Successfully presented and awarded final thesis: “Baggage Handling Systems in La Habana Airport.”;[Graduated with 8.4/10]"
+        "Sep 2015 - Dec 2016; Studying postgraduate courses in Electronics, Photonics, Robotics, Biometrics, High Power Components, and Digital Applications, among other topics.;[completed courses]",
+        "Sep 2012 - Dec 2013; Studying postgraduate courses in SCADA, Advanced Programming, Microprocessors & System on Chips, FPGAs, MATLAB, and Control Systems Theory, among other topics.;[completed courses]",
+        "Sep 2006 - Jun 2011; Graduated as an Engineer in Automation, covering topics like Control Systems, Object-Oriented Programming, Microprocessors, Electronics, Digital Systems, and Robotics. Successfully presented and awarded final thesis: “Baggage Handling Systems in Havana Airport.”;[Graduated with 8.4/10]"
     ],
     "other": [
         "Former student of Deep Learning and Hyperledger Development.",
