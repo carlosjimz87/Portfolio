@@ -1,4 +1,4 @@
-import { setElementText, setElementSrc, createProjectCard, createFooterSection } from './helpers.js';
+import {setElementText, setElementSrc, createProjectCard, createFooterSection, initImageModal} from './helpers.js';
 
 document.addEventListener("DOMContentLoaded", async function() {
   try {
@@ -71,6 +71,8 @@ if (backBtn) {
     });
     io.observe(footer);
   }
+
+  initImageModal();
 
   window.addEventListener('scroll', onScroll, { passive: true });
 }

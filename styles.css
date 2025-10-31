@@ -13,7 +13,7 @@ body {
     }
 }
 
-#footer{
+#footer {
     font-size: 1rem !important;
 }
 
@@ -244,7 +244,7 @@ h4 {
 
 .shrunk-avatar {
     width: 55px;
-    height:55px;
+    height: 55px;
     transform: translateX(100%);
 }
 
@@ -329,73 +329,75 @@ h4 {
 .fan-container {
     display: flex;
     justify-content: center;
-    gap: 0.5rem; 
-  }
-  
-  /* 2) The base style for each image in the fan */
-  .fan-container .fan-image {
-    width: 120px;
-    height: auto;       /* or set a fixed height/width if you prefer squares */
-    border-radius: 10px; 
-    box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
-    object-fit: cover;  /* ensure images fill the shape nicely */
-    transition: transform 0.3s ease;
-  }
+    gap: 0.5rem;
+}
 
-  @media (max-width: 767px) {
+/* 2) The base style for each image in the fan */
+.fan-container .fan-image {
+    width: 120px;
+    height: auto; /* or set a fixed height/width if you prefer squares */
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.25);
+    object-fit: cover; /* ensure images fill the shape nicely */
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 767px) {
     .fan-container .fan-image {
         width: 80px;
     }
-  }
-  
-  /* 3) Use nth-child to rotate each image a bit.
-     Adjust angles and translateX as you like. */
-  .fan-container .fan-image:nth-child(1) {
-    transform: rotate(-10deg) translateX(20px);
-  }
-  .fan-container .fan-image:nth-child(2) {
-    transform: rotate(0deg);
-  }
-  .fan-container .fan-image:nth-child(3) {
-    transform: rotate(10deg) translateX(-20px);
-  }
-  
-  /* If you have more images, keep going or adjust logic accordingly */
-  /* For a hover effect, you could do something like: */
-  .fan-container .fan-image:hover {
-    z-index: 999;   /* bring hovered image on top */
-    transform: scale(1.1);
-  }
+}
 
-  .logo-img {
+/* 3) Use nth-child to rotate each image a bit.
+   Adjust angles and translateX as you like. */
+.fan-container .fan-image:nth-child(1) {
+    transform: rotate(-10deg) translateX(20px);
+}
+
+.fan-container .fan-image:nth-child(2) {
+    transform: rotate(0deg);
+}
+
+.fan-container .fan-image:nth-child(3) {
+    transform: rotate(10deg) translateX(-20px);
+}
+
+/* If you have more images, keep going or adjust logic accordingly */
+/* For a hover effect, you could do something like: */
+.fan-container .fan-image:hover {
+    z-index: 999; /* bring hovered image on top */
+    transform: scale(1.1);
+}
+
+.logo-img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-  }
+}
 
 
-  @media (max-width: 767px) {
-    .logo-img  {
+@media (max-width: 767px) {
+    .logo-img {
         width: 30px;
         height: 30px;
     }
-  }
+}
 
-  .card {
+.card {
     background-color: transparent;
     padding: 40px !important; /* remove default padding */
-    border: none !important;   /* or border: 0 !important; */
+    border: none !important; /* or border: 0 !important; */
     box-shadow: none !important; /* if you want to remove the default card shadow too */
-  }
+}
 
 /* Floating portfolio button styles */
 .floating-portfolio-button {
     position: fixed;
     width: auto;
-    right: 1rem; 
-    bottom: 1rem; 
+    right: 1rem;
+    bottom: 1rem;
     text-align: center;
     line-height: 1.2; /* Align text vertically */
     font-size: 1.5rem !important;
@@ -438,18 +440,17 @@ h4 {
 
 /* === Floating Back button (base look) === */
 .floating-portfolio-button-back {
-  position: fixed;
-  z-index: 1100;                 /* above .fixed-header (1000) */
-  width: auto;
-  text-align: center;
-  line-height: 1.2;
-  font-size: 1.5rem !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* smooth, snappy motion */
-  transition:
-    top 0.25s cubic-bezier(0.25, 1, 0.5, 1),
+    position: fixed;
+    z-index: 1100; /* above .fixed-header (1000) */
+    width: auto;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 1.5rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* smooth, snappy motion */
+    transition: top 0.25s cubic-bezier(0.25, 1, 0.5, 1),
     bottom 0.25s cubic-bezier(0.25, 1, 0.5, 1),
     transform 0.2s ease,
     opacity 0.2s ease;
@@ -457,7 +458,7 @@ h4 {
 
 /* Hover effect (kept subtle to avoid jitter with transitions) */
 .floating-portfolio-button-back:hover {
-  transform: scale(1.06);
+    transform: scale(1.06);
 }
 
 /* === LARGE screens (≥1221px): keep your current spot by default ===
@@ -465,12 +466,12 @@ h4 {
    - stays where you placed it originally: bottom: 70%; left: 15rem
 */
 @media (min-width: 1221px) {
-  .floating-portfolio-button-back {
-    top: auto;
-    bottom: 65%;
-    left: 15rem;
-    transform: none;
-  }
+    .floating-portfolio-button-back {
+        top: auto;
+        bottom: 65%;
+        left: 15rem;
+        transform: none;
+    }
 }
 
 /* === STRETCHED & SMALL screens (≤1220px): default at TOP-CENTER ===
@@ -478,19 +479,19 @@ h4 {
    - top: 1rem; centered on X axis
 */
 @media (max-width: 1220px) {
-  .floating-portfolio-button-back {
-    top: auto;
-    bottom: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    .floating-portfolio-button-back {
+        top: auto;
+        bottom: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* Mobile font size tweak (kept from your file) */
 @media (max-width: 767px) {
-  .floating-portfolio-button-back {
-    font-size: 1rem !important;
-  }
+    .floating-portfolio-button-back {
+        font-size: 1rem !important;
+    }
 }
 
 /* === SCROLLING DOWN state (all breakpoints) ===
@@ -498,68 +499,135 @@ h4 {
    - Only change vertical anchor to bottom (keep horizontal position as defined above)
 */
 .floating-portfolio-button-back.stick-bottom {
-  top: auto !important;
-  bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+    top: auto !important;
+    bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
 }
 
 /* Optional: lift when footer is visible (JS adds .avoid-footer) */
 .floating-portfolio-button-back.stick-bottom.avoid-footer {
-  bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
+    bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
 }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .floating-portfolio-button-back { transition: none; }
+    .floating-portfolio-button-back {
+        transition: none;
+    }
 }
 
 
 /* Dock-to-bottom state for Go-to-Projects */
 .floating-portfolio-button.stick-bottom {
-  top: auto !important;
-  bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+    top: auto !important;
+    bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
 }
 
 /* Lift above footer when visible */
 .floating-portfolio-button.stick-bottom.avoid-footer {
-  bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
+    bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .floating-portfolio-button { transition: none; }
+    .floating-portfolio-button {
+        transition: none;
+    }
 }
 
 /* === Responsive Project Card Images Only === */
 #projects-container .card img:not(.logo-img):not(.footer-icon) {
-  width: 100%;              /* Fit container width */
-  height: auto;             /* Preserve aspect ratio */
-  border-radius: 10px;      /* Keep consistent rounded corners */
-  object-fit: cover;        /* Prevent stretching or squishing */
-  transition: transform 0.3s ease;
+    width: 100%; /* Fit container width */
+    height: auto; /* Preserve aspect ratio */
+    border-radius: 10px; /* Keep consistent rounded corners */
+    object-fit: cover; /* Prevent stretching or squishing */
+    transition: transform 0.3s ease;
 }
 
 /* Subtle zoom effect on hover (optional, remove if not desired) */
 #projects-container .card img:not(.logo-img):not(.footer-icon):hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 /* Medium screens (tablets) — reduce image height */
 @media (max-width: 992px) {
-  #projects-container .card img:not(.logo-img):not(.footer-icon) {
-    max-height: 220px;
-  }
+    #projects-container .card img:not(.logo-img):not(.footer-icon) {
+        max-height: 220px;
+    }
 }
 
 /* Small screens (phones) — smaller image area */
 @media (max-width: 767px) {
-  #projects-container .card img:not(.logo-img):not(.footer-icon) {
-    max-height: 180px;
-  }
+    #projects-container .card img:not(.logo-img):not(.footer-icon) {
+        max-height: 180px;
+    }
 }
 
 /* Extra-small screens (very narrow phones) */
 @media (max-width: 480px) {
-  #projects-container .card img:not(.logo-img):not(.footer-icon) {
-    max-height: 150px;
-    border-radius: 8px;
-  }
+    #projects-container .card img:not(.logo-img):not(.footer-icon) {
+        max-height: 150px;
+        border-radius: 8px;
+    }
+}
+
+/* Cross-browser stable sizing for project thumbnails ONLY (not logos) */
+#projects-container .card img:not(.logo-img):not(.footer-icon) {
+    display: block;
+    width: 100%;
+    /* Give the image an explicit, responsive height so object-fit works in Safari/Chrome */
+    height: clamp(150px, 28vw, 260px); /* tweak the middle 28vw to taste */
+    object-fit: cover; /* crop to frame without distortion */
+    border-radius: 10px;
+    transition: transform 0.25s ease;
+}
+
+/* Optional hover */
+#projects-container .card img:not(.logo-img):not(.footer-icon):hover {
+    transform: scale(1.02);
+}
+
+/* Fine-tune for very small phones */
+@media (max-width: 480px) {
+    #projects-container .card img:not(.logo-img):not(.footer-icon) {
+        height: 150px; /* keeps cards compact on tiny screens */
+        border-radius: 8px;
+    }
+}
+
+#imageModal .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* vertically center */
+}
+
+#imageModal .modal-content {
+  background: transparent !important;
+  border-radius: 12px;
+  width: auto;
+  overflow: hidden;
+  margin: 0 auto; /* ensure horizontal centering */
+}
+
+#imageModal img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90vw; /* never exceed 90% of viewport width */
+    max-height: 85vh; /* never exceed 85% of viewport height */
+    object-fit: contain; /* keep proportions */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+/* Optional: small hover pop */
+#imageModal img:hover {
+    transform: scale(1.02);
+}
+
+/* Tweak padding for smaller screens */
+@media (max-width: 767px) {
+    #imageModal img {
+        max-width: 95vw;
+        max-height: 70vh;
+    }
 }
