@@ -527,3 +527,39 @@ h4 {
 @media (prefers-reduced-motion: reduce) {
   .floating-portfolio-button { transition: none; }
 }
+
+/* === Responsive Project Card Images Only === */
+#projects-container .card img:not(.logo-img):not(.footer-icon) {
+  width: 100%;              /* Fit container width */
+  height: auto;             /* Preserve aspect ratio */
+  border-radius: 10px;      /* Keep consistent rounded corners */
+  object-fit: cover;        /* Prevent stretching or squishing */
+  transition: transform 0.3s ease;
+}
+
+/* Subtle zoom effect on hover (optional, remove if not desired) */
+#projects-container .card img:not(.logo-img):not(.footer-icon):hover {
+  transform: scale(1.03);
+}
+
+/* Medium screens (tablets) — reduce image height */
+@media (max-width: 992px) {
+  #projects-container .card img:not(.logo-img):not(.footer-icon) {
+    max-height: 220px;
+  }
+}
+
+/* Small screens (phones) — smaller image area */
+@media (max-width: 767px) {
+  #projects-container .card img:not(.logo-img):not(.footer-icon) {
+    max-height: 180px;
+  }
+}
+
+/* Extra-small screens (very narrow phones) */
+@media (max-width: 480px) {
+  #projects-container .card img:not(.logo-img):not(.footer-icon) {
+    max-height: 150px;
+    border-radius: 8px;
+  }
+}
