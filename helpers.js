@@ -25,25 +25,30 @@ export function setElementSrc(id, src, alt) {
 }
 
 export function createProjectCard(project) {
-    const col = document.createElement('div');
-    col.className = 'col';
-  
-    // Build the fan of images HTML by mapping over project.images
-    const projectFolder = `${projectsPath}${project.id}/`;
-    const imagesHtml = project.images
-      .map((img, idx) => {
-        return `
-          <img 
-            src="${projectFolder}${img.src}" 
-            alt="${project.title} image ${idx + 1}"
-            class="fan-image"
-          />
-        `;
-      })
-      .join('');
-  
-    // Now place the fan in a container, then the body with the title & logo side-by-side
-    col.innerHTML = `
+  const col = document.createElement('div');
+  col.className = 'col';
+
+  // Build the fan of images HTML by mapping over project.images
+  const projectFolder = `${projectsPath}${project.id}/`;
+  const imagesHtml = project.images
+  .map((img, idx) => {
+    const full = `${projectFolder}${img.src}`;
+    const alt  = `${project.title} image ${idx + 1}`;
+    return `
+      <a href="#" 
+         class="phone-frame fan-image d-block"
+         data-bs-toggle="modal"
+         data-bs-target="#imageModal"
+         data-fullsrc="${full}"
+         data-title="${alt}">
+        <img src="${full}" alt="${alt}" />
+      </a>
+    `;
+  })
+  .join('');
+
+  // Now place the fan in a container, then the body with the title & logo side-by-side
+  col.innerHTML = `
       <div class="card h-100 p-3">
       
         <div class="fan-container d-flex justify-content-center mb-3">
@@ -78,9 +83,9 @@ export function createProjectCard(project) {
         </div>
       </div>
     `;
-  
-    return col;
-  }
+
+  return col;
+}
 
 export function createFooterSection(id, username) {
   const footerSection = document.getElementById(id);
@@ -105,4 +110,30 @@ export function createFooterSection(id, username) {
 
   // Append the footer div to the footer section
   footerSection.appendChild(footerDiv);
+}
+
+export function initImageModal(modalId = 'imageModal') {
+  const modalEl = document.getElementById(modalId);
+  if (!modalEl) return;
+
+  const modalImg = modalEl.querySelector('#modalImage') || modalEl.querySelector('img');
+
+  // Delegate clicks anywhere in the document
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest(`[data-bs-target="#${modalId}"][data-fullsrc]`);
+    if (!trigger) return;
+
+    e.preventDefault();
+
+    const src = trigger.getAttribute('data-fullsrc');
+    const title = trigger.getAttribute('data-title') || 'Project image';
+
+    if (modalImg) {
+      modalImg.src = src;
+      modalImg.alt = title;
+    }
+
+    const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+    modal.show();
+  });
 }
