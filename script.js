@@ -466,3 +466,36 @@ document.addEventListener("DOMContentLoaded", async function() {
         console.error('Error fetching or processing data:', error);
     }
 });
+
+// === Floating Go-to-Projects button: keep X, only change Y on scroll ===
+(() => {
+  const el = document.querySelector('.floating-portfolio-button');
+  if (!el) return;
+
+  let lastY = window.scrollY;
+  const threshold = 8;
+
+  const onScroll = () => {
+    const y = window.scrollY;
+    if (y - lastY > threshold) {
+      el.classList.add('stick-bottom');     // scrolling down → dock to bottom
+    } else if (lastY - y > threshold) {
+      el.classList.remove('stick-bottom');  // scrolling up → restore default
+    }
+    lastY = y;
+  };
+
+  // Avoid footer overlap
+  const footer = document.getElementById('footer');
+  if ('IntersectionObserver' in window && footer) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) el.classList.add('avoid-footer');
+        else el.classList.remove('avoid-footer');
+      });
+    });
+    io.observe(footer);
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+})();

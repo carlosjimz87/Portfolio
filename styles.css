@@ -393,7 +393,6 @@ h4 {
 /* Floating portfolio button styles */
 .floating-portfolio-button {
     position: fixed;
-    z-index: 1000;
     width: auto;
     right: 1rem; 
     bottom: 1rem; 
@@ -408,20 +407,21 @@ h4 {
 
 @media (min-width: 1221px) {
     .floating-portfolio-button {
-        bottom: auto; 
-        top: 50%;
+        top: auto;
+        bottom: 50%;
         right: 10rem;
-        transform: translateY(-50%);
+        left: auto;
+        transform: none;
     }
 }
 
 @media (max-width: 1220px) {
     .floating-portfolio-button {
-        top: auto;
-        bottom: 1rem;
+        bottom: auto;
+        top: 18rem;
         right: auto;
         left: 50%;
-        transform: translateX(-50%); 
+        transform: translateX(-50%);
     }
 }
 
@@ -510,4 +510,20 @@ h4 {
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .floating-portfolio-button-back { transition: none; }
+}
+
+
+/* Dock-to-bottom state for Go-to-Projects */
+.floating-portfolio-button.stick-bottom {
+  top: auto !important;
+  bottom: calc(1rem + env(safe-area-inset-bottom)) !important;
+}
+
+/* Lift above footer when visible */
+.floating-portfolio-button.stick-bottom.avoid-footer {
+  bottom: calc(6rem + env(safe-area-inset-bottom)) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-portfolio-button { transition: none; }
 }
